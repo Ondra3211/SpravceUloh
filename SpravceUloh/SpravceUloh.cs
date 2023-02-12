@@ -5,7 +5,8 @@ namespace SpravceUloh
 {
     public partial class SpravceUloh : Form
     {
-        List<int> procList = new List<int>();
+        private List<int> procList = new List<int>();
+        private int lastProcId;
 
         public SpravceUloh()
         {
@@ -45,6 +46,8 @@ namespace SpravceUloh
                     procList.Add(proc.Id);
                 }
             }
+
+            lstProc.SelectedIndex = procList.IndexOf(lastProcId);
         }
 
         private void txtHledat_TextChanged(object sender, EventArgs e)
@@ -113,6 +116,16 @@ namespace SpravceUloh
             Config.autoUpdate = chckObnovit.Checked;
             Config.killProcess = chckKill.Checked;
             Config.makeConfig();
+        }
+
+        private void lstProc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstProc.SelectedIndex == -1)
+            {
+                return;
+            }
+
+            lastProcId = procList[lstProc.SelectedIndex];
         }
     }
 }
