@@ -72,9 +72,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -92,6 +92,7 @@
             this.tableLayoutPanel1.SetRowSpan(this.lstProc, 3);
             this.lstProc.Size = new System.Drawing.Size(270, 255);
             this.lstProc.TabIndex = 0;
+            this.lstProc.SelectedIndexChanged += new System.EventHandler(this.lstProc_SelectedIndexChanged);
             // 
             // btnKill
             // 
@@ -104,7 +105,7 @@
             this.btnKill.ForeColor = System.Drawing.Color.White;
             this.btnKill.Location = new System.Drawing.Point(319, 93);
             this.btnKill.Name = "btnKill";
-            this.btnKill.Size = new System.Drawing.Size(194, 81);
+            this.btnKill.Size = new System.Drawing.Size(194, 94);
             this.btnKill.TabIndex = 1;
             this.btnKill.Text = "Ukončit";
             this.btnKill.UseVisualStyleBackColor = false;
@@ -163,9 +164,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(319, 180);
+            this.button1.Location = new System.Drawing.Point(319, 193);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 81);
+            this.button1.Size = new System.Drawing.Size(194, 94);
             this.button1.TabIndex = 5;
             this.button1.Text = "Obnovit";
             this.button1.UseVisualStyleBackColor = false;
@@ -176,9 +177,9 @@
             this.panel2.Controls.Add(this.chckObnovit);
             this.panel2.Controls.Add(this.chckKill);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(319, 267);
+            this.panel2.Location = new System.Drawing.Point(319, 293);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(194, 81);
+            this.panel2.Size = new System.Drawing.Size(194, 55);
             this.panel2.TabIndex = 6;
             // 
             // chckObnovit
